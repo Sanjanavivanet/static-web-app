@@ -1,0 +1,293 @@
+<!-- src/app/app.component.html -->
+<div>
+  <h2 style="text-align: center;">SkillJourney Questionnaire</h2>
+  <form #simpleForm="ngForm" (ngSubmit)="submitForm(simpleForm.value)">
+    <h3>Section 1: Personal Information</h3>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" ngModel required>
+    </div>
+    <div>
+      <label for="contactNumber">1.3 Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" ngModel required>
+    </div>
+
+    <div>
+      <label for="collegeName">1.4 College Name:</label>
+      <input type="text" id="collegeName" name="collegeName" ngModel required>
+    </div>
+
+    <div>
+      <label for="major">1.5 Major (e.g., Computer Engineering):</label>
+      <input type="text" id="major" name="major" ngModel required>
+    </div>
+    <div class="centered-section">
+      <h3>Section 2: Personal Values and Interests</h3>
+
+      <div>
+        <label for="coreValues">2.1 What are your core values that you would like to align with in your career? (Open-ended)</label>
+        <textarea id="coreValues" name="coreValues" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="enjoyedActivities">2.2 List three activities or tasks you genuinely enjoy doing in your free time.</label>
+        <input type="text" id="enjoyedActivities1" name="enjoyedActivities1" ngModel required placeholder="Activity 1">
+        <input type="text" id="enjoyedActivities2" name="enjoyedActivities2" ngModel required placeholder="Activity 2">
+        <input type="text" id="enjoyedActivities3" name="enjoyedActivities3" ngModel required placeholder="Activity 3">
+      </div>
+  
+      <div>
+        <label for="passionateAbout">2.3 Are there any specific industries or causes you are passionate about? (Open-ended)</label>
+        <textarea id="passionateAbout" name="passionateAbout" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 3: Personality and Preferences</h3>
+  
+      <div>
+        <label for="personalityDescription">3.1 How would you describe your personality in professional settings? (Open-ended)</label>
+        <textarea id="personalityDescription" name="personalityDescription" ngModel required></textarea>
+      </div>
+  
+      <div class="centered-section">
+        <label for="workPreference">3.2 Do you prefer working independently or in a team environment?</label>
+        <select id="workPreference" name="workPreference" ngModel required>
+          <option value="independent">Independent</option>
+          <option value="team">Team Environment</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="projectRole">3.3 In your group projects, what role do you naturally find yourself taking on?</label>
+        <select id="workPreference" name="workPreference" ngModel required>
+        <option value="leader">Leader</option>
+        <option value="contributor">Contributor</option>
+        <option value="coordinator">Coordinator</option>
+        <option value="analytical thinker">Analytical thinker</option>
+        </select>
+      </div>
+  
+      <h3>Section 4: Psychometric Analysis</h3>
+  
+      <div>
+        <label for="stressHandling">4.1 How do you handle stress and tight deadlines?</label>
+        <select id="stressHandling" name="stressHandling" ngModel required>
+          <option value="remainCalm">A. Remain calm and focused</option>
+          <option value="seekSupport">B. Seek support from others</option>
+          <option value="feelOverwhelmed">C. Feel overwhelmed</option>
+          <option value="other">D. Other (please specify): <input type="text" id="otherStressHandling" name="otherStressHandling" ngModel></option>
+        </select>
+      </div>
+  
+      <div class="centered-section">
+        <label for="challengeApproach">4.2 When faced with a challenge, do you tend to:</label>
+        <select id="challengeApproach" name="challengeApproach" ngModel required>
+          <option value="confrontDirectly">A. Confront the issue directly</option>
+          <option value="seekAdvice">B. Seek advice from others</option>
+          <option value="reflectAndAnalyze">C. Reflect and analyze before taking action</option>
+        </select>
+      </div>
+  
+      <div class="centered-section">
+        <label for="riskTaking">4.3 What is your approach to risk-taking in decision-making?</label>
+        <select id="riskTaking" name="riskTaking" ngModel required>
+          <option value="riskAverse">A. Risk-averse</option>
+          <option value="moderatelyRiskTolerant">B. Moderately risk-tolerant</option>
+          <option value="comfortableTakingRisks">C. Comfortable taking risks</option>
+        </select>
+      </div>
+  
+      <h3>Section 5: Hobbies and Interests</h3>
+  
+      <div class="centered-section">
+        <label for="hobbies">5.1 List three hobbies or activities you are passionate about outside of your academic and professional life.</label>
+        <div style="display: flex; justify-content: center;">
+          <input type="text" id="hobby1" name="hobby1" ngModel required placeholder="Hobby 1" style="margin: 0 10px;">
+          <input type="text" id="hobby2" name="hobby2" ngModel required placeholder="Hobby 2" style="margin: 0 10px;">
+          <input type="text" id="hobby3" name="hobby3" ngModel required placeholder="Hobby 3" style="margin: 0 10px;">
+        </div>
+      </div>
+  
+      <div>
+        <label for="hobbiesAlignment">5.2 How do you see your hobbies aligning with your career choices? (Open-ended)</label>
+        <textarea id="hobbiesAlignment" name="hobbiesAlignment" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 6: Career Preferences and Expectations</h3>
+  
+  <div class="centered-section">
+    <label for="workEnvironment">6.1 What kind of work environment do you believe will bring out your best performance? (Open-ended)</label>
+    <textarea id="workEnvironment" name="workEnvironment" ngModel required></textarea>
+  </div>
+  
+  <div class="centered-section">
+    <label for="rolePreference">6.2 Are you more inclined towards roles that involve creativity, problem-solving, or routine tasks?</label>
+    <select id="rolePreference" name="rolePreference" ngModel required>
+      <option value="creativity">A. Creativity</option>
+      <option value="problemSolving">B. Problem-solving</option>
+      <option value="routineTasks">C. Routine tasks</option>
+    </select>
+  </div>
+  
+  <div class="centered-section">
+    <label for="workLifeBalance">6.3 How important is work-life balance to you in your future career?</label>
+    <select id="workLifeBalance" name="workLifeBalance" ngModel required>
+      <option value="extremelyImportant">A. Extremely important</option>
+      <option value="important">B. Important</option>
+      <option value="neutral">C. Neutral</option>
+      <option value="lessImportant">D. Less important</option>
+      <option value="notImportant">E. Not important at all</option>
+    </select>
+  </div>
+  
+  <h3>Section 7: Future Learning and Development</h3>
+  
+      <div class="centered-section">
+        <label for="continuousLearning">7.1 Are you open to continuous learning and professional development throughout your career?</label>
+        <select id="continuousLearning" name="continuousLearning" ngModel required>
+          <option value="stronglyAgree">A. Strongly agree</option>
+          <option value="agree">B. Agree</option>
+          <option value="neutral">C. Neutral</option>
+          <option value="disagree">D. Disagree</option>
+          <option value="stronglyDisagree">E. Strongly disagree</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="aspiringSkills">7.2 What types of skills or knowledge areas do you aspire to develop in the next 5 years? (Open-ended)</label>
+        <textarea id="aspiringSkills" name="aspiringSkills" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 8: Educational Background and Achievements</h3>
+  
+      <div>
+        <label for="enjoyedSubjects">8.1 What courses or subjects have you enjoyed the most during your academic journey?</label>
+        <textarea id="enjoyedSubjects" name="enjoyedSubjects" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="internshipsResearch">8.2 Have you undertaken any internships, research projects, or extracurricular activities related to your field of study?</label>
+        <textarea id="internshipsResearch" name="internshipsResearch" ngModel required></textarea>
+      </div>
+      <h3>Section 9: Networking and Professional Connections</h3>
+  
+      <div>
+        <label for="industryEvents">9.1 Have you attended any industry conferences, workshops, or networking events? If so, what insights did you gain?</label>
+        <textarea id="industryEvents" name="industryEvents" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="mentors">9.2 Do you have any mentors or professionals in your network whom you admire or seek advice from?</label>
+        <textarea id="mentors" name="mentors" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 10: Geographic Preferences</h3>
+  
+      <div>
+        <label for="relocationPreferences">10.1 Are you open to relocating for career opportunities, or do you prefer to work in a specific geographic location?</label>
+        <textarea id="relocationPreferences" name="relocationPreferences" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="globalJobMarket">10.2 Have you considered the global job market and potential opportunities abroad?</label>
+        <textarea id="globalJobMarket" name="globalJobMarket" ngModel required></textarea>
+      </div>
+  
+     <!-- app.component.html -->
+  <h3>Section 11: Financial Considerations</h3>
+  
+  <div class="centered-section">
+    <label for="salaryImportance">11.1 How important is salary and compensation in your career decision-making process?</label>
+    <select id="salaryImportance" name="salaryImportance" ngModel required>
+      <option value="veryImportant">Very important</option>
+      <option value="important">Important</option>
+      <option value="neutral">Neutral</option>
+      <option value="lessImportant">Less important</option>
+      <option value="notImportant">Not important at all</option>
+    </select>
+  </div>
+  
+  <div class="centered-section">
+    <label for="lowerCompensationConsideration">11.2 Are you open to considering lower initial compensation for a role that aligns better with your long-term career goals?</label>
+    <select id="lowerCompensationConsideration" name="lowerCompensationConsideration" ngModel required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  
+      <h3>Section 12: Work Environment and Company Culture</h3>
+  
+      <div>
+        <label for="companyCulture">12.1 What type of company culture do you thrive in? (e.g., startup, corporate, collaborative, independent)</label>
+        <textarea id="companyCulture" name="companyCulture" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="avoidIndustries">12.2 Are there specific industries or sectors you would prefer to avoid due to personal values or beliefs?</label>
+        <textarea id="avoidIndustries" name="avoidIndustries" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 13: Career Transition and Adaptability</h3>
+  
+      <div class="centered-section">
+        <label for="careerTransition">13.1 Are you open to making a career transition if a compelling opportunity arises in a different field?</label>
+        <select id="careerTransition" name="careerTransition" ngModel required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="uncertaintyHandling">13.2 How do you handle uncertainty and change in your professional life?</label>
+        <textarea id="uncertaintyHandling" name="uncertaintyHandling" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 14: Long-Term Lifestyle Goals</h3>
+  
+      <div>
+        <label for="workLifeBalanceGoals">14.1 What role does work-life balance play in your long-term lifestyle goals?</label>
+        <textarea id="workLifeBalanceGoals" name="workLifeBalanceGoals" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="lifestyleConsiderations">14.2 Are there any specific lifestyle considerations (e.g., remote work, flexible hours) that are crucial for your well-being?</label>
+        <textarea id="lifestyleConsiderations" name="lifestyleConsiderations" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 15: Reflection and Self-Discovery</h3>
+  
+      <div>
+        <label for="selfAssessmentTests">15.1 Have you taken any self-assessment tests or career aptitude assessments to gain insights into your strengths and preferences?</label>
+        <textarea id="selfAssessmentTests" name="selfAssessmentTests" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="idealDayAtWork">15.2 How would you describe your ideal day at work? What tasks or activities would make you excited to go to work each day?</label>
+        <textarea id="idealDayAtWork" name="idealDayAtWork" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 16: Goal Setting and Action Plans</h3>
+  
+      <div>
+        <label for="careerGoals">16.1 Have you outlined short-term and long-term career goals? What steps have you taken towards achieving them?</label>
+        <textarea id="careerGoals" name="careerGoals" ngModel required></textarea>
+      </div>
+  
+      <div>
+        <label for="careerProgression">16.2 What are your thoughts on career progression and advancement? Are there specific milestones you aim to achieve?</label>
+        <textarea id="careerProgression" name="careerProgression" ngModel required></textarea>
+      </div>
+  
+      <h3>Section 17: Final Thoughts</h3>
+  
+      <div>
+        <label for="finalThoughts">17.1 Is there anything else you would like to share about your career aspirations, personal preferences, or any specific considerations?</label>
+        <textarea id="finalThoughts" name="finalThoughts" ngModel required></textarea>
+      </div>
+      </div>
+    <button type="submit" [disabled]="simpleForm.invalid">Submit</button>
+  </form>
+</div>

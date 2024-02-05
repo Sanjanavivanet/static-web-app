@@ -1,0 +1,93 @@
+/* app.component.css */
+
+/* Background Image Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  /* background: url('response/src/assets/bg.jpg') center center fixed; */
+  background-size: cover;
+}
+
+/* Form Container Styling */
+.container {
+  max-width: 400px; /* Adjusted max-width */
+  margin: auto;
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); /* Background color for better readability */
+  text-align: center; /* Center-align text within the container */
+}
+
+/* Header Styling */
+h2 {
+  color: #e74c3c; /* Header text color set to a vibrant red */
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #2c3e50; /* Label text color set to a dark gray */
+  font-weight: bold; /* Make the text bold */
+  font-size: 18px; /* Set the font size to 18px */
+}
+
+/* Input and Textarea Styling */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #f39c12; /* Border color set to a vibrant orange */
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+  padding: 6px 12px; /* Adjusted padding for a smaller button */
+  font-size: 14px; /* Adjusted font size */
+  background-color: white;
+  color: purple;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #3498db; /* List item color set to a vibrant blue */
+  border: 2px solid #2980b9; /* Border color set to a darker blue */
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* Additional Styles for Centered Section */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.centered-section label {
+  margin-bottom: 15px;
+}
